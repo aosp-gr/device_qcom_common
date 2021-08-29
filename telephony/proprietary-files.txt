@@ -1,3 +1,5 @@
+etc/permissions/privapp-permissions-qti.xml
+etc/sysconfig/qti_whitelist.xml
 -product/app/CallFeaturesSetting/CallFeaturesSetting.apk
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 -system_ext/app/ConfURIDialer/ConfURIDialer.apk
