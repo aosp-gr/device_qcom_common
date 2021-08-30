@@ -151,10 +151,15 @@ TARGET_KERNEL_VERSION ?= 3.18
 endif
 
 ifeq ($(call is-board-platform-in-list,$(QCOM_BOARD_PLATFORMS)),true)
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS ?= true
+
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 # Compatibility matrix
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(QCOM_COMMON_PATH)/vendor_framework_compatibility_matrix.xml
+
+PRODUCT_PROPERTY_OVERRIDES += ro.vendor.qti.va_aosp.support=1
+PRODUCT_ODM_PROPERTIES += ro.vendor.qti.va_odm.support=1
 endif
 
 # Components
@@ -184,5 +189,12 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0_system \
     libhidltransport.vendor \
     libhwbinder.vendor
+
+# QTI framework detect
+PRODUCT_PACKAGES += \
+    libvndfwk_detect_jni.qti \
+    libqti_vndfwk_detect \
+    libvndfwk_detect_jni.qti.vendor \
+    libqti_vndfwk_detect.vendor
 
 endif
