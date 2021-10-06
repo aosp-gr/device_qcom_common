@@ -13,12 +13,12 @@
 # limitations under the License.
 
 # Inherit from QSSI audio makefile.
-include $(TOPDIR)$(TARGET_HALS_PATH)/audio/configs/qssi/qssi.mk
+include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/qssi/qssi.mk
 
 ifeq ($(call is-board-platform-in-list,sm6150),true)
--include $(TOPDIR)$(TARGET_HALS_PATH)/audio/configs/msmsteppe/msmsteppe.mk
+-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/msmsteppe/msmsteppe.mk
 else
--include $(TOPDIR)$(TARGET_HALS_PATH)/audio/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
+-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
 endif
 
 # Override proprietary definitions from SoC audio makefile.
