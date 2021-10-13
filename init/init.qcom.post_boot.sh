@@ -6081,3 +6081,7 @@ esac
 misc_link=$(ls -l /dev/block/bootdevice/by-name/misc)
 real_path=${misc_link##*>}
 setprop persist.vendor.mmi.misc_dev_path $real_path
+
+rm -f /data/system/storage.xml
+touch /data/system/storage.xml
+chattr +i /data/system/storage.xml
