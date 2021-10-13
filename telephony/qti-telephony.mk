@@ -65,7 +65,6 @@ PRODUCT_COPY_FILES += \
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    DEVICE_PROVISIONED=1 \
     persist.vendor.cne.feature=1 \
     persist.vendor.data.mode=concurrent \
     persist.vendor.dpm.feature=11 \
