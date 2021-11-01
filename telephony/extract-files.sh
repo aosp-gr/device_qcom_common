@@ -28,4 +28,11 @@ set -e
 export COMPONENT=telephony
 export VENDOR=qcom/common
 
+function blob_fixup() {
+    case "${1}" in
+    system_ext/lib64/lib-imsvideocodec.so)
+        patchelf --add-needed "libgui-shim.so" "${2}"
+    esac
+}
+
 "../extract-files.sh" "$@"

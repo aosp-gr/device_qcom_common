@@ -84,5 +84,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.ims.vt.enableadb=0
 endif
 
+# Shims
+PRODUCT_PACKAGES += \
+    libgui-shim
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/telephony/telephony-vendor.mk)
