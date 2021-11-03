@@ -13,7 +13,6 @@ product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 -system_ext/app/SimContact/SimContact.apk
 -system_ext/app/SimSettings/SimSettings.apk
 -system_ext/app/atfwd/atfwd.apk
--system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/embms/embms.apk
 -system_ext/app/imssettings/imssettings.apk
 -system_ext/app/remoteSimLockAuthentication/remoteSimLockAuthentication.apk
@@ -220,3 +219,6 @@ system_ext/lib64/vendor.qti.latency@2.1.so
 -system_ext/priv-app/ims/ims.apk
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -system/framework/tcmclient.jar
+
+# QTI datastatusnotification - from LA.QSSI.12.0.r1-04300.02-qssi.0
+-system_ext/app/datastatusnotification/datastatusnotification.apk|8958536fbfc421771ad3afc674bfa0e04bcf3b32
