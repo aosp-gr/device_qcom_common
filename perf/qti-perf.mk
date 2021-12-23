@@ -15,11 +15,6 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/perf
 
-# Boot Jars
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
-
 # Configs
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/perf/configs/common,$(TARGET_COPY_OUT_VENDOR)/etc) \
